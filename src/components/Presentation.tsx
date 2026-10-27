@@ -74,10 +74,7 @@ export function Presentation({ onExit }: PresentationProps) {
   }, []);
 
   useEffect(() => {
-    const el = area.current;
-    if (!el) return;
-    el.scrollTop = 0;
-    el.focus({ preventScroll: true });
+    if (area.current) area.current.scrollTop = 0;
   }, [index]);
 
   useEffect(() => {
@@ -108,14 +105,20 @@ export function Presentation({ onExit }: PresentationProps) {
           go(e.shiftKey ? -1 : 1);
           break;
         case 'ArrowDown':
-          if (el && el.scrollTop + el.clientHeight < el.scrollHeight - 4) return;
           e.preventDefault();
-          go(1);
+          if (el && el.scrollTop + el.clientHeight < el.scrollHeight - 4) {
+            el.scrollBy({ top: Math.round(el.clientHeight * 0.8) });
+          } else {
+            go(1);
+          }
           break;
         case 'ArrowUp':
-          if (el && el.scrollTop > 4) return;
           e.preventDefault();
-          go(-1);
+          if (el && el.scrollTop > 4) {
+            el.scrollBy({ top: -Math.round(el.clientHeight * 0.8) });
+          } else {
+            go(-1);
+          }
           break;
         case 'Home':
           e.preventDefault();
@@ -173,7 +176,9 @@ export function Presentation({ onExit }: PresentationProps) {
       <div
         className="pres-area"
         ref={area}
-        tabIndex={-1}
+        tabIndex={0}
+        role="group"
+        aria-label="Slide content"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
         onClick={onClick}

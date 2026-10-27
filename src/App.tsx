@@ -142,7 +142,17 @@ export function App() {
 
   return (
     <>
-      <a className="skip-link" href="#top">
+      <a
+        className="skip-link"
+        href="#top"
+        onClick={(e) => {
+          // Stay on the current page. A plain #top link would send case pages back home.
+          e.preventDefault();
+          const main = document.getElementById('top');
+          main?.focus();
+          main?.scrollIntoView();
+        }}
+      >
         Skip to content
       </a>
       <Nav routeKey={key} onPresent={start} />

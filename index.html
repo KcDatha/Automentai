@@ -4,12 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#080c1f" media="(prefers-color-scheme: dark)" />
+
     <title>Automent AI</title>
     <meta
       name="description"
-      content="Automent AI designs, builds and runs AI systems that read documents, route requests and update your tools."
+      content="Automent AI designs, builds and runs AI systems that read documents, route requests and update your tools, with people reviewing the decisions that need them."
     />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Automent AI" />
+    <meta property="og:title" content="Automent AI" />
+    <meta
+      property="og:description"
+      content="AI automation studio. We build systems that read documents, route requests and update your tools."
+    />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_SITE_URL%/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Automent AI: automate the work your team repeats every day"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Automent AI" />
+    <meta
+      name="twitter:description"
+      content="AI automation studio. We build systems that read documents, route requests and update your tools."
+    />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Automent AI",
+        "url": "%VITE_SITE_URL%/",
+        "description": "Automent AI designs, builds and runs AI systems that read documents, route requests and update your tools."
+      }
+    </script>
+
     <script>
       // Runs before first paint so the saved theme applies with no flash.
       (function () {
