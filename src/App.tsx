@@ -6,12 +6,19 @@ import { UseCases } from './components/UseCases';
 import { Why } from './components/Why';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { useReveal } from './lib/useReveal';
 
 export function App() {
+  const routeKey = 'home';
+  useReveal(routeKey);
+
   return (
     <>
-      <Nav />
-      <main className="wrap" id="top">
+      <a className="skip-link" href="#top">
+        Skip to content
+      </a>
+      <Nav routeKey={routeKey} />
+      <main className="wrap" id="top" tabIndex={-1}>
         <Hero />
         <Services />
         <Process />

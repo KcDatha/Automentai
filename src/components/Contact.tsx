@@ -32,7 +32,7 @@ export function Contact() {
 
   return (
     <section className="section contact-section" id="contact">
-      <div className="contact">
+      <div className="contact" data-reveal>
         <div>
           <h2>Pick one process. We will show you what automating it looks like.</h2>
           <p>

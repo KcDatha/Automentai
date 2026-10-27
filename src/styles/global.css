@@ -203,3 +203,29 @@ svg {
     scroll-behavior: auto;
   }
 }
+
+/* Scroll reveal. Hidden only after the inline script in index.html adds .js. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.js [data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.icon-btn:focus-visible,
+.btn:focus-visible {
+  outline-offset: 2px;
+}

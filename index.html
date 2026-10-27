@@ -10,9 +10,21 @@
       content="Automent AI designs, builds and runs AI systems that read documents, route requests and update your tools."
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      // Runs before first paint so the saved theme applies with no flash.
+      (function () {
+        var root = document.documentElement;
+        try {
+          var t = localStorage.getItem('automent-theme');
+          if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t);
+        } catch (e) {}
+        root.classList.add('js');
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>This site needs JavaScript. Email us at hello@automentai.com.</noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

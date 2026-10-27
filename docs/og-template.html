@@ -1,0 +1,107 @@
+<!doctype html>
+<!-- Source for public/og.png (1200x630). Open in Chromium and screenshot the .card element.
+     Fonts are loaded from node_modules, so run "npm install" first. -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @font-face {
+        font-family: 'Bricolage';
+        font-weight: 200 800;
+        src: url('../node_modules/@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2')
+          format('woff2');
+      }
+      @font-face {
+        font-family: 'Instrument';
+        font-weight: 400 700;
+        src: url('../node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2')
+          format('woff2');
+      }
+      body {
+        margin: 0;
+      }
+      .card {
+        width: 1200px;
+        height: 630px;
+        box-sizing: border-box;
+        padding: 72px 80px;
+        background: #080c1f;
+        color: #eef1ff;
+        font-family: 'Instrument', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+      }
+      .glow {
+        position: absolute;
+        right: -160px;
+        top: -160px;
+        width: 620px;
+        height: 620px;
+        border-radius: 50%;
+        background: #2f4bff;
+        opacity: 0.55;
+        filter: blur(90px);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-family: 'Bricolage', sans-serif;
+        font-weight: 800;
+        font-size: 38px;
+        position: relative;
+      }
+      .mark {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: #7b8dff;
+        display: grid;
+        place-items: center;
+      }
+      h1 {
+        font-family: 'Bricolage', sans-serif;
+        font-weight: 800;
+        font-size: 86px;
+        line-height: 1.02;
+        letter-spacing: -0.03em;
+        margin: 0;
+        max-width: 900px;
+        position: relative;
+      }
+      h1 em {
+        font-style: normal;
+        color: #7b8dff;
+      }
+      .foot {
+        font-size: 28px;
+        color: #9aa5cb;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="glow"></div>
+      <div class="brand">
+        <span class="mark">
+          <svg width="30" height="30" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M3 12 8 3l5 9M5.2 9h5.6"
+              stroke="#080c1f"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        Automent AI
+      </div>
+      <h1>Automate the work your team <em>repeats every day.</em></h1>
+      <div class="foot">AI automation studio</div>
+    </div>
+  </body>
+</html>

@@ -5,7 +5,7 @@ export function Why() {
   return (
     <section className="section" id="why">
       <div className="why">
-        <div className="sec-head">
+        <div className="sec-head" data-reveal>
           <span className="mono">Why Automent AI</span>
           <h2>Automation your team can inspect, correct and trust</h2>
           <p>
@@ -13,7 +13,7 @@ export function Why() {
             real company.
           </p>
         </div>
-        <ul>
+        <ul data-reveal>
           {reasons.map((r) => (
             <li key={r.title}>
               <Icon name="tick" strokeWidth={2.2} />

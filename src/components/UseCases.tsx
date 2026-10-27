@@ -3,12 +3,12 @@ import { useCases } from '../data/useCases';
 export function UseCases() {
   return (
     <section className="section" id="work">
-      <div className="sec-head">
+      <div className="sec-head" data-reveal>
         <span className="mono">Example use cases</span>
         <h2>What this looks like in a real department</h2>
         <p>Typical starting points for companies in operations, finance, support and sales.</p>
       </div>
-      <div className="cases">
+      <div className="cases" data-reveal>
         {useCases.map((c) => (
           <article className="case" key={c.title}>
             <span className="mono">{c.area}</span>
