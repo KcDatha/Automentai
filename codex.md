@@ -11,18 +11,18 @@ This file is the running list of every prompt we give Codex for this project.
 
 ## Status
 
-- [ ] Prompt 0: Project rules
-- [ ] Prompt 1: Move to a Vite + React + TypeScript project
-- [ ] Prompt 2: Design polish, theme toggle and motion
-- [ ] Prompt 3: Interactive "try an automation" demo
-- [ ] Prompt 4: Case studies from a data file
-- [ ] Prompt 5: Per-company showcase mode
-- [ ] Prompt 6: Presentation mode for meetings
-- [ ] Prompt 7: ROI calculator
-- [ ] Prompt 8: Working contact form
-- [ ] Prompt 9: SEO, accessibility and performance
-- [ ] Prompt 10: Tests and CI
-- [ ] Prompt 11: Deploy
+- [x] Prompt 0: Project rules
+- [x] Prompt 1: Move to a Vite + React + TypeScript project
+- [x] Prompt 2: Design polish, theme toggle and motion
+- [x] Prompt 3: Interactive "try an automation" demo
+- [x] Prompt 4: Case studies from a data file
+- [x] Prompt 5: Per-company showcase mode
+- [x] Prompt 6: Presentation mode for meetings
+- [x] Prompt 7: ROI calculator
+- [x] Prompt 8: Working contact form
+- [x] Prompt 9: SEO, accessibility and performance
+- [x] Prompt 10: Tests and CI
+- [x] Prompt 11: Deploy
 
 ---
 
@@ -269,3 +269,15 @@ Acceptance criteria:
 Add one line per completed prompt in this format: `YYYY-MM-DD | Prompt N | one-sentence summary`
 
 - 2026-10-26 | Setup | Initial static site (index.html) and this prompt list created.
+- 2026-10-26 | Prompt 0 | Project rules recorded and followed for every task below.
+- 2026-10-26 | Prompt 1 | Converted the single file into a Vite + React + TypeScript project with typed data files, the original kept in docs/legacy-index.html.
+- 2026-10-26 | Prompt 2 | Added theme toggle with no flash, sticky nav with active section, mobile menu, scroll reveal, favicon and share image.
+- 2026-10-26 | Prompt 3 | Added the in-browser "Try it" demo with three labelled sample inputs, rule-based output and no network requests.
+- 2026-10-26 | Prompt 4 | Case studies now come from src/data/caseStudies.ts with hash-route detail pages; all six are marked as illustrative examples.
+- 2026-10-26 | Prompt 5 | Added showcase mode (?company, industry, contact), cleaned as untrusted text, plus the unlisted #builder link generator.
+- 2026-10-26 | Prompt 6 | Added full-screen presentation mode (Present button or P) with keyboard, clicker and swipe navigation and scroll restore on exit.
+- 2026-10-26 | Prompt 7 | Added the "Estimate your savings" calculator with validation, a formula panel and a button that pre-fills the contact message.
+- 2026-10-26 | Prompt 8 | Added the contact form posting to VITE_FORM_ENDPOINT with inline validation, honeypot and an email fallback when no endpoint is set.
+- 2026-10-26 | Prompt 9 | Added SEO tags, robots.txt, sitemap.xml, self-hosted latin fonts with preload and accessibility fixes; local mobile Lighthouse 98 performance, 100 accessibility, 100 best practices, 100 SEO, axe 0 violations.
+- 2026-10-26 | Prompt 10 | Added 61 Vitest unit tests, 23 Playwright end-to-end and axe tests, and ci.yml (lint, typecheck, unit tests, build, browser tests).
+- 2026-10-26 | Prompt 11 | Added deploy.yml for GitHub Pages (checks, build with base /Automentai/, live URL in summary) and a generated 404.html; not yet run on GitHub.

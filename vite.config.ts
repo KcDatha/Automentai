@@ -57,6 +57,37 @@ function seoFiles(siteUrl: string): Plugin {
   };
 }
 
+/** Writes 404.html. GitHub Pages serves it for unknown paths; it sends visitors to the home page. */
+function notFoundPage(base: string): Plugin {
+  return {
+    name: 'not-found-page',
+    apply: 'build',
+    generateBundle() {
+      const home = JSON.stringify(base);
+      this.emitFile({
+        type: 'asset',
+        fileName: '404.html',
+        source: `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Page not found | Automent AI</title>
+<meta http-equiv="refresh" content="3;url=${base}" />
+<script>location.replace(${home});</script>
+</head>
+<body style="font-family:system-ui,sans-serif;padding:2rem">
+<h1>That page does not exist</h1>
+<p><a href="${base}">Go to the Automent AI home page</a></p>
+</body>
+</html>
+`,
+      });
+    },
+  };
+}
+
 // VITE_BASE is set by the deploy workflow (for example "/Automentai/" on GitHub Pages).
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), 'VITE_');
@@ -64,7 +95,7 @@ export default defineConfig(({ mode }) => {
   const siteUrl = process.env.VITE_SITE_URL ?? env.VITE_SITE_URL ?? 'http://localhost:4173';
   return {
     base,
-    plugins: [react(), preloadFonts(base), seoFiles(siteUrl)],
+    plugins: [react(), preloadFonts(base), seoFiles(siteUrl), notFoundPage(base)],
     test: {
       include: ['tests/**/*.test.ts'],
       environment: 'node',
