@@ -1,0 +1,258 @@
+.demo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.demo-col {
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  display: grid;
+  gap: 16px;
+}
+
+.demo-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.samples {
+  display: grid;
+  gap: 8px;
+}
+
+.sample-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sample-btn small {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.sample-btn:hover {
+  border-color: var(--ink);
+}
+
+.sample-btn[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.sample-text {
+  margin: 0;
+  min-height: 190px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--bg);
+  border: 1px dashed var(--line);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--ink);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.link-btn {
+  background: none;
+  border: 0;
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 2px;
+}
+
+.link-btn:disabled {
+  color: var(--muted);
+  cursor: default;
+}
+
+.demo-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.dstep {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--muted);
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.dstep .dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  border: 1px solid var(--line);
+  flex: none;
+}
+
+.dstep.active {
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.dstep.active .dot {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.dstep.done {
+  color: var(--ink);
+}
+
+.dstep.done .dot {
+  background: var(--ok);
+  border-color: var(--ok);
+  color: var(--bg);
+}
+
+.result {
+  border-top: 1px dashed var(--line);
+  padding-top: 16px;
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.result.empty {
+  color: var(--muted);
+  font-size: 14px;
+  min-height: 120px;
+  align-content: center;
+}
+
+.result dl {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.result dl > div {
+  display: grid;
+  grid-template-columns: minmax(110px, 38%) 1fr;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.result dt {
+  color: var(--muted);
+}
+
+.result dd {
+  margin: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.flags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.flags li {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 10px;
+  align-items: start;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.flags li b {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.flags li.ok b {
+  color: var(--ok);
+}
+
+.flags li.review {
+  border-color: var(--warn);
+}
+
+.flags li.review b {
+  color: var(--warn);
+}
+
+.next {
+  display: grid;
+  gap: 4px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 920px) {
+  .demo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .demo-col {
+    padding: 16px;
+  }
+
+  .result dl > div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
