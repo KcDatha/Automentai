@@ -1,0 +1,55 @@
+.svc {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.svc:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.svc .ic {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+}
+
+.svc h3 {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.svc p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.svc ul {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.svc li {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+}

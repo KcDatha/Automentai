@@ -1,0 +1,58 @@
+/* Design tokens. Every color on the site comes from these variables.
+   Light is the base. Dark applies for the system setting unless the
+   viewer chose light, and always when the viewer chose dark. */
+:root {
+  --bg: #eef1f7;
+  --surface: #ffffff;
+  --surface-2: #e4e9f3;
+  --ink: #0d1330;
+  --muted: #55607e;
+  --line: #cfd6e6;
+  --accent: #2f4bff;
+  --accent-ink: #ffffff;
+  --accent-soft: #dfe5ff;
+  --ok: #138a5b;
+  --warn: #b25e00;
+  --shadow: rgba(20, 30, 90, 0.35);
+  --font-display: 'Bricolage Grotesque Variable', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Instrument Sans Variable', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #080c1f;
+    --surface: #101733;
+    --surface-2: #17204a;
+    --ink: #eef1ff;
+    --muted: #9aa5cb;
+    --line: #26305e;
+    --accent: #7b8dff;
+    --accent-ink: #080c1f;
+    --accent-soft: #1b2559;
+    --ok: #4ad49b;
+    --warn: #f0a24a;
+    --shadow: rgba(0, 0, 0, 0.55);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #080c1f;
+  --surface: #101733;
+  --surface-2: #17204a;
+  --ink: #eef1ff;
+  --muted: #9aa5cb;
+  --line: #26305e;
+  --accent: #7b8dff;
+  --accent-ink: #080c1f;
+  --accent-soft: #1b2559;
+  --ok: #4ad49b;
+  --warn: #f0a24a;
+  --shadow: rgba(0, 0, 0, 0.55);
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}

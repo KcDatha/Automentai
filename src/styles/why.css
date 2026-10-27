@@ -1,0 +1,50 @@
+.why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.why > * {
+  min-width: 0;
+}
+
+.why .sec-head {
+  margin-bottom: 0;
+}
+
+.why ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.why li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 14px;
+}
+
+.why li svg {
+  color: var(--accent);
+  margin-top: 3px;
+}
+
+.why li b {
+  display: block;
+  font-size: 17px;
+}
+
+.why li span {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+@media (max-width: 920px) {
+  .why {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
