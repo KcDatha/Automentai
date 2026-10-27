@@ -77,6 +77,7 @@
 
 .field input,
 .field select,
+.field textarea,
 .link-row input {
   width: 100%;
   min-width: 0;
@@ -91,6 +92,7 @@
 
 .field input:focus-visible,
 .field select:focus-visible,
+.field textarea:focus-visible,
 .link-row input:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 1px;

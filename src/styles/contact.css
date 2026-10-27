@@ -64,3 +64,68 @@
     padding: 32px 22px;
   }
 }
+
+.card p {
+  margin: 0;
+  opacity: 1;
+  max-width: none;
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+/* Spam trap field. Kept off screen instead of display:none so simple bots still fill it. */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-msg {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.form-msg.ok {
+  border-color: var(--ok);
+}
+
+.form-msg.bad {
+  border-color: var(--warn);
+}
+
+.mail-alt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+  font-size: 14px;
+}
+
+.mail-alt .row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mail-alt .link-btn {
+  font-size: 13px;
+}

@@ -7,6 +7,7 @@ import { Demo } from './components/Demo';
 import { Process } from './components/Process';
 import { CaseStudies } from './components/CaseStudies';
 import { CaseStudyPage } from './components/CaseStudyPage';
+import { Roi } from './components/Roi';
 import { Why } from './components/Why';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -25,6 +26,7 @@ function HomePage() {
       <Demo />
       <Process />
       <CaseStudies />
+      <Roi />
       <Why />
       <Contact />
     </>

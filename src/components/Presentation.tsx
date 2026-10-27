@@ -14,6 +14,7 @@ import { ForCompany } from './ForCompany';
 import { Demo } from './Demo';
 import { Process } from './Process';
 import { CaseStudies } from './CaseStudies';
+import { Roi } from './Roi';
 import { Why } from './Why';
 import { Contact } from './Contact';
 import { Icon } from './Icon';
@@ -49,6 +50,7 @@ export function Presentation({ onExit }: PresentationProps) {
       { id: 'try', label: 'Try it', node: <Demo /> },
       { id: 'process', label: 'Process', node: <Process /> },
       { id: 'work', label: 'Use cases', node: <CaseStudies /> },
+      { id: 'estimate', label: 'Savings', node: <Roi /> },
       { id: 'why', label: 'Why us', node: <Why /> },
       { id: 'contact', label: 'Contact', node: <Contact /> },
     );

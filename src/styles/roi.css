@@ -1,0 +1,146 @@
+.roi {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.roi > * {
+  min-width: 0;
+}
+
+.roi-form,
+.roi-out {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.roi-form {
+  grid-template-columns: 1fr 1fr;
+}
+
+.roi-form .field:last-child {
+  grid-column: 1 / -1;
+}
+
+.field small {
+  font-size: 12.5px;
+  min-height: 1.4em;
+}
+
+.field small.hint {
+  color: var(--muted);
+}
+
+.field small.err {
+  color: var(--warn);
+  font-weight: 600;
+}
+
+.field input[aria-invalid='true'] {
+  border-color: var(--warn);
+}
+
+.field input[type='range'] {
+  padding: 0;
+  height: 28px;
+  accent-color: var(--accent);
+  background: transparent;
+  border: 0;
+}
+
+.roi-out {
+  align-content: start;
+  border-color: var(--accent);
+}
+
+.roi-out dl {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.roi-out dl > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.roi-out dt {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.roi-out dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  font-variant-numeric: tabular-nums;
+}
+
+.roi-out .big dd {
+  font-size: 34px;
+  color: var(--accent);
+}
+
+.roi-out .btn {
+  justify-content: center;
+}
+
+.roi-out .hint {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.how {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.how summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink);
+  padding-block: 4px;
+}
+
+.how p {
+  margin-top: 8px;
+}
+
+.roi-out .note {
+  margin-top: 0;
+}
+
+@media (max-width: 920px) {
+  .roi {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .roi-form {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .roi-out {
+    padding: 18px;
+  }
+
+  .roi-out dd {
+    font-size: 21px;
+  }
+
+  .roi-out .big dd {
+    font-size: 28px;
+  }
+}
