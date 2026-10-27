@@ -14,9 +14,10 @@ const navLinks = [
 
 interface NavProps {
   routeKey: string;
+  onPresent: () => void;
 }
 
-export function Nav({ routeKey }: NavProps) {
+export function Nav({ routeKey, onPresent }: NavProps) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const menuBtn = useRef<HTMLButtonElement>(null);
@@ -85,6 +86,15 @@ export function Nav({ routeKey }: NavProps) {
               </a>
             ))}
           </nav>
+          <button
+            type="button"
+            className="icon-btn present-btn"
+            onClick={onPresent}
+            aria-label="Start presentation mode (shortcut: P)"
+            title="Present (P)"
+          >
+            <Icon name="play" size={16} />
+          </button>
           <ThemeToggle />
           <a className="btn nav-cta" href="#contact">
             Talk to us
